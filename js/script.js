@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    function setActiveNavItem(page) {
+    function setarItemMenuAtivo(page) {
         $(".navbar .nav-item").removeClass("active");
         $(`a[data-page='${page}']`).parent().addClass("active");
     }
 
     $("#content").load("pages/home.html", function() {
-        setActiveNavItem('home');
+        setarItemMenuAtivo('home');
     });
 
     $('a[data-page]').on('click', function (e) {
@@ -18,6 +18,6 @@ $(document).ready(function () {
             }
         });
 
-        setActiveNavItem(page);
+        setarItemMenuAtivo(page);
     });
 });
