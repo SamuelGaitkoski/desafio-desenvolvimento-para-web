@@ -2,6 +2,16 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.texto {
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+img {
+    width: 50%;
+}
+
 .navbar {
     margin-bottom: 20px;
     padding: 10px 20px;

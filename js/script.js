@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $("#content").load("pages/home.html"); 
+
     $('a[data-page]').on('click', function (e) {
         e.preventDefault();
 
@@ -14,7 +16,5 @@ $(document).ready(function () {
 
             $(this).addClass('active');
         });
-
-
     });
 });
