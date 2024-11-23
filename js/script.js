@@ -1,5 +1,12 @@
 $(document).ready(function () {
-    $("#content").load("pages/home.html"); 
+    function setActiveNavItem(page) {
+        $(".navbar .nav-item").removeClass("active");
+        $(`a[data-page='${page}']`).parent().addClass("active");
+    }
+
+    $("#content").load("pages/home.html", function() {
+        setActiveNavItem('home');
+    });
 
     $('a[data-page]').on('click', function (e) {
         e.preventDefault();
@@ -11,10 +18,6 @@ $(document).ready(function () {
             }
         });
 
-        $('.nav-item').on('click', function(e) {
-            $('.nav-item').removeClass('active');
-
-            $(this).addClass('active');
-        });
+        setActiveNavItem(page);
     });
 });

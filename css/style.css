@@ -38,3 +38,17 @@ footer {
     width: 100%;
 }
 
+.navbar .nav-item.active a {
+    position: relative;
+    color: white; 
+}
+
+.navbar .nav-item.active a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: white; 
+}
